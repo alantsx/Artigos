@@ -199,8 +199,6 @@ setTimeout(() => primeiraMensagem(segundaMensagem), 3000);
 
 ```
 
-Output:
-
 **Output**
 
 <img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/6.gif?raw=true" alt="callback gif 6" style="height: 350px;"/>
@@ -289,8 +287,6 @@ setTimeout(() => primeiraMensagem(
     , 'Segunda mensagem')
 , 'Primeira mensagem'), 3000);
 ```
-
-Output:
 
 **Output**
 
