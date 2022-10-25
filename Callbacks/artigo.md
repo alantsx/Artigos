@@ -1,6 +1,8 @@
 # Introdução a Callbacks no JavaScript
 
-Recentemente escrevi um artigo sobre Promises e Async / Await, não só para contribuir com a comunidade BR mas também na intenção de solidificar meus conhecimentos. Porém, é impossível falar de Promises sem antes desenrolar um assunto fundamental: __As Callbacks__. Se você tem a intenção de entender melhor como funciona o JavaScript de forma assíncrona, este é o primeiro passo.
+Escrevi um artigo sobre Promises e Async / Await, recentemente, para contribuir com a comunidade BR e aprofundar meus conhecimentos. 
+Para falar de Promises é fundamental desenrolar um assunto antes: __As Callbacks__. 
+Se você tem a intenção de entender melhor como funciona o JavaScript de forma assíncrona, este é o primeiro passo.
 
 Então vamos nessa? Simbora.
 
@@ -15,7 +17,7 @@ Imagine uma sequência de instruções qualquer, como uma receita de bolo. Para 
 4. Assar a 180ºC por 40 minutos
 ```
 
-O JavaScript funciona de maneira similar. Ele irá receber a sequência de instruções do algoritmo e irá executá-lo numa ordem padrão de cima para baixo.
+O JavaScript funciona de maneira similar, Uma sequência de instruções do algoritmo será executada na ordem de cima para baixo.
 
 ```Javascript
 
@@ -37,7 +39,7 @@ segundaMensagem();
 
 ## A semântica do Callback
 
-Entendemos que a execução de código sempre seguirá uma determinada ordem. Agora vamos para um outro exemplo. Dessa vez utilizaremos a função `setTimeout` para fazer com que a primeira mensagem demore 3 segundos para ser exibida. Vamos ver o resultado?
+É comum que a execução de código siga uma determinada ordem. Veja um outro exemplo, dessa vez utilizaremos a função `setTimeout` para fazer com que a primeira mensagem demore 3 segundos para ser exibida. Vamos ver o resultado?
 
 ```Javascript
 
@@ -52,14 +54,15 @@ setTimeout(primeiraMensagem(), 3000);
 
 <img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/1.gif?raw=true" alt="primeira Mensagem" style="height: 350px;"/>
 
-Tem alguma ideia do que pode ter causado este erro? Na verdade, pudemos observar duas coisas:
+Você tem alguma ideia do que pode ter causado este erro? 
+Na verdade, eu gostaria que você observasse duas coisas:
 
 1. A função `primeiraMensagem` é executada automaticamente, sem a espera dos 3 segundos
-2. A função `setTimeout` arremessa um erro de _callback inválida_.
+2. A função `setTimeout` lança um erro de _callback inválida_.
 
-Isso acontece pois como executamos `primeiraMensagem()`, com os parênteses no final, fizemos na verdade uma **Invocação** da função. Ou seja, mandamos ela executar imediatamente. E quando o setTimeout foi procurar o que havia no primeiro parâmetro, não encontrou nada (encontrou undefined), já que `primeiraMensagem` já havia sido executada.
+Executamos `primeiraMensagem()`, com parênteses no final, isso **Invoca** aa função, ou seja, ordenamos a execução imediata dela e, quando o `setTimeout` procurou o que havia no primeiro parâmetro, não encontrou nada (recebeu undefined), já que `primeiraMensagem` já havia sido executada.
 
-Para que possamos entender completamente, vamos para um exemplo parecido, mas dessa vez retiraremos os parênteses ao final de `primeiraMensagem()`.
+Para entender completamente, vamos para um exemplo parecido, mas dessa vez retirando os parênteses no final de `primeiraMensagem()`.
 
 ```Javascript
 
@@ -75,7 +78,7 @@ setTimeout(primeiraMensagem, 3000);
 
 Voilá! O que entendemos disso? No cenário acima existe uma diferença semântica na função `primeiraMensagem` de passá-la como argumento, sem os parênteses. Estas são as famosas **_callbacks_**. Ou seja, ela **não está sendo invocada diretamente, e sim sendo passada como parâmetro para que outra função, a `setTimeout`, a chame (CALL) novamente (BACK)**.
 
-Neste segundo exemplo, podemos passar uma função como callback para que a função `recebeCallback` possa utilizar essa função dentro dela.
+Neste segundo exemplo, podemos passar uma função como callback para que a função `recebeCallback` possa chamar (e executar) essa função dentro dela.
 
 ```JavaScript
 function recebeCallback(callbackRecebida) {
@@ -96,15 +99,15 @@ recebeCallback(imprimeValor);
 
 - A função `imprimeValor` será responsável somente por imprimir o valor que recebe como parâmetro.
 
-- A função `recebeCallback` será invocada recebendo `imprimeValor` como callback e assim seguirá:
-    1. Irá gerar um número aleatório de 1 a 100;
-    2. Irá invocar a callback `imprimeValor` recebida como parâmetro que consequentemente imprimirá no console o número aleatório
+- A função `recebeCallback` será invocada recebendo `imprimeValor` como callback e assim irá:
+    1. Gerar um número aleatório de 1 a 100;
+    2. Invocar a callback `imprimeValor` recebida como parâmetro que consequentemente imprimirá no console o número aleatório
 
 ## Usando o JavaScript assíncrono com as callbacks
 
-Como passar funções como callbacks já aprendemos, agora exploraremos um pouco mais a fundo pra entender a maior vantagem das callbacks: a utilização do Javascript de maneira assíncrona!
+Aprendemos como passar funções como callbacks, agora vamos entender a maior vantagem das callbacks: a utilização do Javascript de maneira assíncrona!
 
-Então vamos para mais um exemplo. Desta vez voltaremos para as duas funções lá do início `primeiraMensagem()` e `segundaMensagem()`. Na função `primeiraMensagem()` iremos enviar uma ordem de espera de 3 segundos para execução e logo em seguida iremos chamar a função `segundaMensagem()`. Qual deverá ser o output? Vamos ver.
+O próximo exemplo reutiliza as duas funções do início do artigo `primeiraMensagem()` e `segundaMensagem()`. Na função `primeiraMensagem()` configuramos uma espera de 3 segundos para execução e logo em seguida iremos chamar a função `segundaMensagem()`. Qual deverá ser o output? Vamos ver.
 
 ```Javascript
 
@@ -130,7 +133,7 @@ segundaMensagem();
 
 O que aconteceu? Se o código é sempre executado de cima para baixo, por que o JavaScript não esperou que a primeira mensagem fosse exibida antes da segunda?
 
-Neste caso o JavaScript leu o código corretamente, executou a ação dos 3 segundos para exibir a mensagem e __continuou a execução de forma síncrona do restante do código__. Ou seja, ele leu `setTimeout`, mandou a execução acontecer e continou a ler a próxima linha de código que neste caso foi `segundaMensagem()`.
+Neste caso o JavaScript leu o código corretamente, executou a ação dos 3 segundos para exibir a mensagem e __continuou a execução de forma síncrona do restante do código__. Ou seja, ele leu `setTimeout`, mandou a execução acontecer e continuou a ler a próxima linha de código que neste caso foi `segundaMensagem()`.
 
 Mas esse não é o output que queríamos, certo? Queríamos que `segundaMensagem()` fosse executada somente após `primeiraMensagem()`. E se fizéssemos uma modificação? Vamos incluir `segundaMensagem()` como callback de `primeiraMensagem()` e fazer com que essa callback seja executada 2 segundos depois da execução da primeira.
 
@@ -150,14 +153,14 @@ setTimeout(primeiraMensagem(segundaMensagem), 3000);
 
 ```
 
-Agora sim. Desta forma `segundaMensagem()` só será executada 2 segundos após a execução de `primeiraMensagem()`. Vamos para o output?
+Agora sim, desta forma `segundaMensagem()` só será executada 2 segundos após a execução de `primeiraMensagem()`. Vamos para o output?
 
 **Output**
 
 <img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/5.gif?raw=true" alt="callback gif 5" style="height: 350px;"/>
 
 
-Ué, o erro de undefined novamente? Se olharmos com atenção notaremos que cometemos um erro fatal. Ao passarmos `segundaMensagem` como callback de `primeiraMensagem`, abrimos os parêtensis de `primeiraMensagem` fazendo com que essa seja executada imediatamente e deixasse de ser passada como callback.
+Ué, o erro de undefined novamente? Se olharmos com atenção notaremos que cometemos um erro fatal. Ao passarmos `segundaMensagem` como callback de `primeiraMensagem`, abrimos os parêntesis de `primeiraMensagem` fazendo com que essa seja executada imediatamente e deixasse de ser passada como callback.
 
 Então como fazer com que ainda que passando `segundaMensagem` como parâmetro, consigamos manter `primeiraMensagem` como callback? Neste caso usaremos as **funções anônimas**, também conhecidas como **arrow functions**.
 
@@ -181,7 +184,7 @@ De volta ao assunto.
 
 -----
 
-Utilizando uma função anônima que sua única utilidade será retornar a invocação de `primeiraMensagem`, podemos manter `primeiraMensagem` em sua forma de callback
+Ao criar uma função anônima que tem como única utilidade retornar a invocação de `primeiraMensagem`, podemos manter `primeiraMensagem` em sua forma de callback.
 
 ```Javascript
 
@@ -204,7 +207,7 @@ setTimeout(() => primeiraMensagem(segundaMensagem), 3000);
 <img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/6.gif?raw=true" alt="callback gif 6" style="height: 350px;"/>
 
 
-Agora sim! Neste caso a função anônima será a chave para destrancarmos o poder das callbacks. Para mergulhar um pouco mais afundo nessa maravilhosa funcionalidade, iremos adicionar um último degrau de complexidade em nossos exemplos. Dessa vez faremos com que `segundaMensagem` também receba um parâmetro. Neste caso será a mensagem que gostaríamso de imprimir no console.
+Agora sim! Neste caso a função anônima será a chave para destrancarmos o poder das callbacks. Para mergulhar um pouco mais afundo nessa maravilhosa funcionalidade, iremos adicionar um último degrau de complexidade em nossos exemplos. Dessa vez faremos com que `segundaMensagem` também receba um parâmetro. Neste caso será a mensagem que gostaríamos de imprimir no console.
 
 Primeiro vamos escrever da forma "errada", para entendermos a correta.
 
@@ -246,7 +249,7 @@ setTimeout(() => primeiraMensagem(() => segundaMensagem('Essa mensagem vem por s
 
 Através das callbacks, somos capazes de manipular a ordem de execução das funções. Até aqui os exemplos foram simples e didáticos. No entanto, o mundo real é mais complicado e algumas aplicações se tornam complexas.
 
-O uso das callbacks em projetos complexos cria um problema de legibilidade de código e torna seu uso mais difícil. Quer ver? Vamos para um exemplo onde temos 5 funções que imprime mensagem, uma sendo executada 2 segundos depois da outra e recebendo a mensagem como parâmetro. Como essas funções seriam escritas normalmente?
+O uso das callbacks em projetos complexos cria um problema de legibilidade de código e torna seu uso mais difícil, quer ver? Vamos para um exemplo onde temos 5 funções que imprimem mensagens, uma sendo executada 2 segundos depois da outra e recebendo a mensagem como parâmetro. Como essas funções seriam escritas normalmente?
 
 ```Javascript
 function primeiraMensagem(callback, mensagem) {
@@ -300,7 +303,7 @@ Felizmente existe uma maneira de evitar que esse tipo de problema aconteça. E e
 
 ## Conclusão
 
-Ufa! Chegamos ao final e tenho certeza que daqui pra frente Callback é um assunto mais claro para você. Agora é só praticar!
+Ufa! Chegamos ao final, tenho certeza que daqui pra frente Callback é um assunto mais claro para você e agora é só praticar!
 
 Agradecimentos e crédito à [Ania Kubów](https://www.youtube.com/watch?v=cNjIUSDnb9k) e [Mario Souto](https://youtu.be/6lbBaM18X3g) que também dão excelentes explicações acerca do assunto.
 
