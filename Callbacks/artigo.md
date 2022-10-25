@@ -45,7 +45,7 @@ function primeiraMensagem () {
     console.log('Essa mensagem vem por primeiro');
 }
 
-setTimeout(primeiraMensagem(), 3000);
+setTimeout(primeiraMensagem, 3000);
 ```
 
 **Output**
