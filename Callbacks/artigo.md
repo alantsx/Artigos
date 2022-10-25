@@ -48,7 +48,9 @@ function primeiraMensagem () {
 setTimeout(primeiraMensagem(), 3000);
 ```
 
-_**gif do output**_
+**Output**
+
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/1.gif?raw=true" alt="primeira Mensagem" style="height: 350px;"/>
 
 Tem alguma ideia do que pode ter causado este erro? Na verdade, pudemos observar duas coisas:
 
@@ -67,8 +69,9 @@ function primeiraMensagem () {
 
 setTimeout(primeiraMensagem, 3000);
 ```
+**Output**
 
-_**gif do output**_
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/2.gif?raw=true" alt="primeira Mensagem funcionando" style="height: 200px;"/>
 
 Voilá! O que entendemos disso? No cenário acima existe uma diferença semântica na função `primeiraMensagem` de passá-la como argumento, sem os parênteses. Estas são as famosas **_callbacks_**. Ou seja, ela **não está sendo invocada diretamente, e sim sendo passada como parâmetro para que outra função, a `setTimeout`, a chame (CALL) novamente (BACK)**.
 
@@ -87,7 +90,9 @@ function imprimeValor(valorParaImprimir) {
 
 recebeCallback(imprimeValor);
 ```
-_**gif do output**_
+**Output**
+
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/3.gif?raw=true" alt="callback gif 3" style="height: 350px;"/>
 
 - A função `imprimeValor` será responsável somente por imprimir o valor que recebe como parâmetro.
 
@@ -119,8 +124,9 @@ segundaMensagem();
 // ... 5 segundos depois
 // Essa mensagem vem por primeiro
 ```
+**Output**
 
-_**gif do output**_
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/4.gif?raw=true" alt="callback gif 4" style="height: 350px;"/>
 
 O que aconteceu? Se o código é sempre executado de cima para baixo, por que o JavaScript não esperou que a primeira mensagem fosse exibida antes da segunda?
 
@@ -144,9 +150,12 @@ setTimeout(primeiraMensagem(segundaMensagem), 3000);
 
 ```
 
-Agora sim. Desta forma `segundaMensagem()` só será executada 2 segundos após a execução de `primeiraMensagem()`. Vamos para o output?\
+Agora sim. Desta forma `segundaMensagem()` só será executada 2 segundos após a execução de `primeiraMensagem()`. Vamos para o output?
 
-_**gif do output**_
+**Output**
+
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/5.gif?raw=true" alt="callback gif 5" style="height: 350px;"/>
+
 
 Ué, o erro de undefined novamente? Se olharmos com atenção notaremos que cometemos um erro fatal. Ao passarmos `segundaMensagem` como callback de `primeiraMensagem`, abrimos os parêtensis de `primeiraMensagem` fazendo com que essa seja executada imediatamente e deixasse de ser passada como callback.
 
@@ -192,7 +201,10 @@ setTimeout(() => primeiraMensagem(segundaMensagem), 3000);
 
 Output:
 
-_**gif do output**_
+**Output**
+
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/6.gif?raw=true" alt="callback gif 6" style="height: 350px;"/>
+
 
 Agora sim! Neste caso a função anônima será a chave para destrancarmos o poder das callbacks. Para mergulhar um pouco mais afundo nessa maravilhosa funcionalidade, iremos adicionar um último degrau de complexidade em nossos exemplos. Dessa vez faremos com que `segundaMensagem` também receba um parâmetro. Neste caso será a mensagem que gostaríamso de imprimir no console.
 
@@ -228,9 +240,9 @@ function segundaMensagem(mensagem) {
 setTimeout(() => primeiraMensagem(() => segundaMensagem('Essa mensagem vem por segundo')), 3000);
 ```
 
-Output:
+**Output**
 
-_**gif do output**_
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/7.gif?raw=true" alt="callback gif 7" style="height: 350px;"/>
 
 ## O problema do uso das Callbacks: O Callback Hell
 
@@ -280,12 +292,13 @@ setTimeout(() => primeiraMensagem(
 
 Output:
 
-_**gif do output**_
+**Output**
+
+<img src="https://github.com/alantsx/Artigos/blob/main/Callbacks/resouces/8.gif?raw=true" alt="callback gif 8" style="height: 400px;"/>
 
 Veja que a medida que são adicionadas novas chamadas de callbacks, a complexidade irá aumentar e a compreensão do código ficará mais difícil. Em casos mais extremos seu código vai parecer que foi cortado ao meio pelo Hadouken do Ryuu.
 
-
-_**montagem do Ryuu**_
+<img src="https://raw.githubusercontent.com/alantsx/Artigos/main/Callbacks/resouces/callback%20hell.jpg" alt="callback gif 3" style="height: 200px;"/>
 
 Felizmente existe uma maneira de evitar que esse tipo de problema aconteça. E estamos falando das Promises! E para a conveniência de todos, eu tenho um [artigo explicando o assunto](https://dev.to/alanfabricio/introducao-a-promises-async-await-no-javascript-4pjm) também!
 
