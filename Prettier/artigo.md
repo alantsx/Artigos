@@ -87,7 +87,7 @@ Já temos tudo pronto para testar o funcionamento do Prettier. Se você está ad
 É um arquivo simples para testar as configurações do Prettier. Iremos inserir apenas o seguinte código:
 
 ```javascript
-const testPrettier = { message: "this is a test for the prettier" };
+const testPrettier = {mensagem: "isso é um teste do prettier"}
 ```
 
 Para que o Prettier faça sua mágica, adicionaremos o comando de correção no nosso arquivo `package.json`. Caso não haja o objeto `scripts`, use o exemplo abaixo para adicionar no seu `package.json`. Mas caso já possua, só adicione o comando `format`:
@@ -113,7 +113,7 @@ Agora execute o comando usando o seu gerenciador de pacotes:
 Olhando novamente para o arquivo `src/index.js`, a nossa variável deverá estar formatada assim:
 
 ```javascript
-const testPrettier = { message: "this is a test for the prettier" };
+const testPrettier = { mensagem: 'isso é um teste do prettier' };
 ```
 
 Voilá! Temos nosso código formatado do jeitinho que queríamos. Mas não acaba por aí porque o tópico a seguir vai mudar a sua vida!
