@@ -135,3 +135,33 @@ No campo de busca procure por `formatter` (ou formatador) e selecione o Prettier
 <img src="https://github.com/alantsx/Artigos/blob/main/Prettier/resources/asset2.png?raw=true" alt="prettier image"/>
 
 Por último, faremos com que o Prettier execute nossas regras automaticamente toda vez que salvarmos um arquivo ou colarmos um código no nosso projeto. Para isso, abriremos o arquivo de preferências em JSON do VSCode através do comando CTRL + Shift + P e selecionaremos para abrir o arquivo JSON:
+
+<img src="https://github.com/alantsx/Artigos/blob/main/Prettier/resources/asset3.png?raw=true" alt="prettier image"/>
+
+Neste arquivo, adicionaremos duas configurações novas: O `editor.formatOnSave` e o `editor.formatOnPaste`, como no exemplo abaixo:
+
+```javascript
+{
+    ...
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+}
+```
+
+Se tudo der certo, seu Prettier estará integrado com o VSCode, lendo as regras do arquivo `.prettierrc` na pasta raíz do seu projeto e aplicando essas regras toda vez que você salvar um arquivo ou colar um código.
+
+## Conclusão
+
+Espero que este artigo sirva de guia para uma primeira configuração do prettier e que agora seu código se torne mais legível e bonito!
+
+Teve algum problema? Comenta aqui em baixo!
+
+Se este link foi útil pra você ou você quer apoiar o meu trabalho,
+deixa seu like ou estrelinha aí e compartilhe ❤️
+
+![Deixa seu like aí!!!](https://media.giphy.com/media/fAVOVstMKzWEOgl4gV/giphy.gif)
+
+## Links úteis
+
+- [Documentação do Prettier](https://prettier.io/docs/en/index.html)
+- [Arquivo .prettierrc com regras básicas]()
