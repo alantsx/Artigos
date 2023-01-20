@@ -1,10 +1,10 @@
 # Adicionando o Prettier ao seu projeto JavaScript/TypeScript
 
-Uma das maiores dificuldades de quem está iniciando em programação é o uso correto de nomenclaturas, regras de sintaxe e desatenção a detalhes que podem acabar sacrificando o seu tempo de estudo em busca de correções de escrita e erros de digitação errada.
+Uma das maiores dificuldades de quem está iniciando em programação é o uso correto de nomenclaturas, regras de sintaxe e desatenção a detalhes que podem acabar sacrificando o seu tempo de estudo em busca de correções de escrita e erros de digitação.
 
-Felizmente, existe uma maneira de automatizar o seu projeto para que a sua IDE faça essas correções automaticamente, salvando um tempo precioso de digitação. E a ferramenta para isso é o **Prettier**.
+Felizmente, existe uma maneira de facilitar a sua vida para que a sua IDE faça essas correções automaticamente, salvando um tempo precioso de digitação. E a ferramenta para isso é o **Prettier**.
 
-Através dele, podemos configurar regras específicas de como a sintaxe do seu código deve se comportar, corrigindo automaticamente eventuais erros e criando uma padronização de regras que devem ser seguidas, independente de quem esteja trabalhando no projeto.
+Através dele, podemos configurar regras específicas de como a sintaxe do seu código deve se comportar, corrigindo automaticamente eventuais erros e criando uma padronização, independente de quem esteja trabalhando no projeto.
 
 Vejamos um exemplo. Podemos estabelecer as seguintes regras:
 
