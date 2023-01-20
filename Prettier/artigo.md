@@ -159,9 +159,9 @@ Teve algum problema? Comenta aqui em baixo!
 Se este link foi útil pra você ou você quer apoiar o meu trabalho,
 deixa seu like ou estrelinha aí e compartilhe ❤️
 
-![Deixa seu like aí!!!](https://media.giphy.com/media/fAVOVstMKzWEOgl4gV/giphy.gif)
+![Deixa seu like aí!!!](https://media.giphy.com/media/nbvFVPiEiJH6JOGIok/giphy.gif)
 
 ## Links úteis
 
 - [Documentação do Prettier](https://prettier.io/docs/en/index.html)
-- [Arquivo .prettierrc com regras básicas]()
+- [Arquivo .prettierrc com regras básicas](https://github.com/alantsx/Artigos/blob/main/Prettier/resources/.prettierrc)
