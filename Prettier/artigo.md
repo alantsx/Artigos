@@ -150,6 +150,21 @@ Neste arquivo, adicionaremos duas configurações novas: O `editor.formatOnSave`
 
 Se tudo der certo, seu Prettier estará integrado com o VSCode, lendo as regras do arquivo `.prettierrc` na pasta raíz do seu projeto e aplicando essas regras toda vez que você salvar um arquivo ou colar um código.
 
+## Bônus
+
+No arquivo JSON de preferências você pode determinar regras para linguagens específicas. Por exemplo, desativar a correção ao salvar e colar para arquivos `typescript`, por exemplo:
+
+```javascript
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": false
+    }
+}
+```
+
 ## Conclusão
 
 Espero que este artigo sirva de guia para uma primeira configuração do prettier e que agora seu código se torne mais legível e bonito!
