@@ -132,4 +132,6 @@ O segundo passo é adicionar o Prettier como o editor padrão do VSCode. Para is
 
 No campo de busca procure por `formatter` (ou formatador) e selecione o Prettier como formatador padrão do VSCode:
 
-<img src="https://github.com/alantsx/Artigos/blob/main/Prettier/resources/asset2.png?raw=true" alt="prettier image" style="height: 350px;"/>
+<img src="https://github.com/alantsx/Artigos/blob/main/Prettier/resources/asset2.png?raw=true" alt="prettier image"/>
+
+Por último, faremos com que o Prettier execute nossas regras automaticamente toda vez que salvarmos um arquivo ou colarmos um código no nosso projeto. Para isso, abriremos o arquivo de preferências em JSON do VSCode através do comando CTRL + Shift + P e selecionaremos para abrir o arquivo JSON:
