@@ -126,4 +126,10 @@ Através dela, o código _será formatado automaticamente sem a necessidade do u
 
 O primeiro passo para fazer essa integração é ir na aba de extensões do VSCode (penúltimo ícone ou apenas Cmd + Shift + X ou CTRL + Shift + X) e procurar pela extensão do Prettier. Basta instalar e ela será adicionada ao seu VSCode.
 
-<img src="https://github.com/alantsx/Artigos/blob/main/Prettier/resouces/asset1.png?raw=true" alt="callback gif 4" style="height: 350px;"/>
+<img src="https://github.com/alantsx/Artigos/blob/main/Prettier/resources/asset1.png?raw=true" alt="prettier image" style="height: 350px;"/>
+
+O segundo passo é adicionar o Prettier como o editor padrão do VSCode. Para isso abra o menu `arquivo`>`preferências`>`configurações`
+
+No campo de busca procure por `formatter` (ou formatador) e selecione o Prettier como formatador padrão do VSCode:
+
+<img src="https://github.com/alantsx/Artigos/blob/main/Prettier/resources/asset2.png?raw=true" alt="prettier image" style="height: 350px;"/>
