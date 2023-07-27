@@ -26,4 +26,9 @@ Desta forma, da próxima vez que você abrir o seu terminal de preferência, o c
 
 _**Caso esse comando não apareça:**_  Fiz alguns testes e pesquisas, e pelo Windows, parece que o VSCode não fornece mais a opção de adicionar esse comando ao path posteriormente. Portanto recomendo salvar todas as suas configurações na nuvem através da sincronização de opções, permitindo que você desinstale o VSCode e reinstale-o sem perder nada.
 
-<img src="https://github.com/alantsx/Artigos/blob/main/add-code-to-path-windows/assets/settingsync.jpeg?raw=true" alt="setting sync on vscode" style="height: 350px;"/>
+<img src="https://github.com/alantsx/Artigos/blob/main/add-code-to-path-windows/assets/settingsync.jpeg?raw=true" alt="setting sync on vscode"/>
+
+-----
+Finalmente, desta forma você agora conseguirá abrir os seus arquivos e projetos de forma muito mais rápida e eficiente no VSCode. E aí, sabia dessa? Se foi útil, deixa um ❤️
+
+<img src="https://media.giphy.com/media/o9C3VLpwpkk5VaXMlT/giphy.gif" alt="Bye"/>
