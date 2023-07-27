@@ -30,7 +30,7 @@ Existem algumas maneiras de instalar esse comando para ser usado direto no seu t
 
 Desta forma, da próxima vez que você abrir o seu terminal de preferência, o comando code estará pronto para ser usado.
 
-_**Caso esse comando não apareça:**_  Fiz alguns testes e pesquisas, e pelo Windows, parece que o VSCode não fornece mais a opção de adicionar esse comando ao path posteriormente. Portanto recomendo salvar todas as suas configurações na nuvem através da sincronização de opções, permitindo que você desinstale o VSCode e reinstale-o sem perder nada.
+_**Caso esse comando não apareça:**_  Fiz alguns testes e pesquisas, e pelo Windows, parece que o VSCode não fornece mais a opção de adicionar esse comando ao path posteriormente. Portanto recomendo salvar todas as suas configurações na nuvem através da sincronização de opções, permitindo que você desinstale o VSCode e reinstale-o sem perder nada e ativando a opção do passo anterior no instalador.
 
 <img src="https://github.com/alantsx/Artigos/blob/main/add-code-to-path-windows/assets/settingsync.jpeg?raw=true" alt="setting sync on vscode"/>
 
