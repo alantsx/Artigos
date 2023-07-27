@@ -1,6 +1,6 @@
 # Dica rápida VALIOSA de VSCode: Abrindo seus projetos através do terminal
 
-Muitas pessoas que estão iniciando na programação e utilizam o VSCode ainda abrem os seus projetos da maneira "lenta", indo pelo menu de Arquivo e abrir uma pasta. 
+Muitas pessoas que estão iniciando na programação e utilizam o VSCode ainda abrem os seus projetos da maneira "lenta", indo pelo menu de Arquivo e selecionando uma pasta para abrir. 
 
 No entanto, a medida que vamos tendo mais projetos e trabalhando cada vez mais com programação, essa acaba sendo uma maneira menos prática, e como desenvolvedores nós sempre estamos tentando encontrar uma maneira de fazer as coisas melhores, por mais simples que sejam.
 
