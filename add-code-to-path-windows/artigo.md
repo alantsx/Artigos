@@ -1,3 +1,5 @@
+# Dica rápida VALIOSA de VSCode: Abrindo seus projetos através do terminal
+
 Muitas pessoas que estão iniciando na programação e utilizam o VSCode ainda abrem os seus projetos da maneira tradicional, indo pelo menu de Arquivo e abrir uma pasta. No entanto, a medida que vamos tendo mais projetos e trabalhando cada vez mais com programação, essa acaba sendo uma maneira menos prática, e como desenvolvedores nós sempre estamos tentando encontrar uma maneira de fazer as coisas melhores, por mais simples que sejam. Por isso, uma das formas mais práticas de se abrir diferentes projetos pelo VSCode é através da linha de comando, e hoje vou te mostrar como.
 
     Disclaimer: Fiz este tutorial para usuários de Windows, se você usa outro sistema operacional, o método é similar mas provavelmente será diferente em algum ponto.
