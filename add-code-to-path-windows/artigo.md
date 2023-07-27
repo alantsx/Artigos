@@ -12,7 +12,7 @@ _Disclaimer: Fiz este tutorial para usuários de Windows, se você usa outro sis
 ### Utilizando comando code
 O comando `code` permite abrir um arquivo ou pasta no terminal, para isso, basta digitar `code caminho_do_arquivo_ou_pasta` e o VSCode irá abrir automaticamente no arquivo/pasta selecionado. Neste sentido, o que eu costumo fazer é navegar via Explorer até a pasta que eu quero, e só assim a partir daí abrir um terminal na pasta desejada (usando shift + botão direito e abrindo o Power Shell). A partir daí eu aplico o comando `code .`. Veja um exemplo:
 
-<img src="https://github.com/alantsx/Artigos/blob/main/add-code-to-path-windows/assets/opening_vscode.gif?raw=true" alt="opening vscode" style="height: 350px;"/>
+<img src="https://github.com/alantsx/Artigos/blob/main/add-code-to-path-windows/assets/opening_vscode2.gif?raw=true" alt="opening vscode" style="height: 350px;"/>
 
 ### Mas eu tenho o comando code?
 
