@@ -1,4 +1,4 @@
-# Dica rápida VALIOSA de VSCode: Abrindo seus projetos através do terminal
+# Iniciante: Abrindo seus projetos com VSCode através do terminal
 
 Muitas pessoas que estão iniciando na programação e utilizam o VSCode ainda abrem os seus projetos da maneira "lenta", indo pelo menu de Arquivo e selecionando uma pasta para abrir. 
 
